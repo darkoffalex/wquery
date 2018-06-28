@@ -22,7 +22,7 @@ namespace wquery
 	* \param controlClassName Наименовая WinApi класса элемента управления
 	* \param dwStyle Стиль отображения элемента
 	*/
-	ControlBase::ControlBase(Window* window, const std::string& controlClassName, DWORD dwStyle) :
+	ControlBase::ControlBase(Window* window, const std::string& controlClassName, DWORD dwStyle, const Vector2D<int>& defaultSizes) :
 		hWnd_(nullptr),
 		window_(window),
 		anchor_(AnchorSettings(false, false, false, false)),
@@ -39,7 +39,7 @@ namespace wquery
 				NULL,
 				dwStyle,
 				0, 0,
-				150, 30,
+				defaultSizes.X, defaultSizes.Y,
 				this->window_->GetNativeHandle(),
 				NULL,
 				hInstance_,

@@ -194,6 +194,14 @@ namespace wquery
 		void SetSysMenuStatus(const bool visible) const;
 
 		/**
+		 * \brief Установка иконки приложения из файла
+		 * \param iconFilename Путь к .ico файлу
+		 * \param width Ширина загружаемой иконки
+		 * \param height Высота загружаемой иконки
+		 */
+		void SetIcon(const std::string &iconFilename, int width = 16, int height = 16) const;
+
+		/**
 		* \brief Максимизировать окно
 		*/
 		void Maximize() const;

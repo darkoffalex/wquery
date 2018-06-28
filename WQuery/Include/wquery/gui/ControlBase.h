@@ -38,7 +38,7 @@ namespace wquery
 		* \param controlClassName Наименовая WinApi класса элемента управления
 		* \param dwStyle Стиль отображения элемента
 		*/
-		ControlBase(Window * window, const std::string& controlClassName, DWORD dwStyle = WS_CHILD | WS_VISIBLE);
+		ControlBase(Window * window, const std::string& controlClassName, DWORD dwStyle = WS_CHILD | WS_VISIBLE, const Vector2D<int>& defaultSizes = {150,30});
 
 		/**
 		* \brief Деструктор (вирутальный, уничтожает в том числе и объект-наследник)

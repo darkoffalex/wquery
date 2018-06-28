@@ -57,6 +57,9 @@
     <ClCompile Include="Source\gui\TextBox.cpp">
       <Filter>Файлы исходного кода</Filter>
     </ClCompile>
+    <ClCompile Include="Source\tools\files.cpp">
+      <Filter>Файлы исходного кода\tools</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Include\wquery\stdafx.h">
@@ -82,6 +85,9 @@
     </ClInclude>
     <ClInclude Include="Include\wquery\gui\TextBox.h">
       <Filter>Заголовочные файлы\gui</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\wquery\tools\files.h">
+      <Filter>Заголовочные файлы\tools</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

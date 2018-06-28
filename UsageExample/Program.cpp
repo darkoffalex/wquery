@@ -10,18 +10,8 @@ int main(int argc, char* argv[])
 	w.SetMinSizes({ 400,200 }, true);
 	w.SetPosition({ 100,100 });
 	w.SetClosesProgram(true);
+	w.SetIcon(wquery::GetExeDir().append("\\logo.ico"));
 	w.Show();
-
-	wquery::TextBox tb(&w);
-	tb.SetSize({ 300, 25 });
-	tb.SetPosition({ 50,50 });
-	tb.SetAnchor(wquery::AnchorSettings(true, true, true, false));
-
-	wquery::Button b(&w);
-	b.SetSize({ 150,25 });
-	b.SetPosition({ 125,100 });
-	b.SetAnchor(wquery::AnchorSettings(true, false, true, true));
-	b.SetText("Button");
 
 	wquery::End(wquery::MainLoopType::GET_MSG);
 	return 0;

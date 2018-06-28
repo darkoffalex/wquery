@@ -506,6 +506,24 @@ namespace wquery
 	}
 
 	/**
+	* \brief Установка иконки приложения из файла
+	* \param iconFilename Путь к .ico файлу
+	* \param width Ширина загружаемой иконки
+	* \param height Высота загружаемой иконки
+	*/
+	void Window::SetIcon(const std::string& iconFilename, int width, int height) const
+	{
+		if(this->hWnd_)
+		{
+			HANDLE icon = LoadImageA(nullptr, iconFilename.c_str(), IMAGE_ICON, width, height, LR_LOADFROMFILE);
+			if (icon)
+			{
+				SendMessageA(this->hWnd_, WM_SETICON, ICON_BIG, reinterpret_cast<LPARAM>(icon));
+			}
+		}
+	}
+
+	/**
 	* \brief Максимизировать окно
 	*/
 	void Window::Maximize() const
@@ -586,6 +604,9 @@ namespace wquery
 				FillRect(reinterpret_cast<HDC>(wParam), &clientAreaRect, window->backgroundColor_.GetNativeBrush());
 			}
 			break;
+
+		case WM_NCPAINT:
+			return DefWindowProc(hWnd, message, wParam, lParam);
 
 		case WM_SIZE:
 			if (window)

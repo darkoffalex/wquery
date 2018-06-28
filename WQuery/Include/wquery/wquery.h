@@ -14,6 +14,8 @@
 #include "gui/Window.h"
 #include "gui/Button.h"
 #include "gui/TextBox.h"
+#include "tools/text.h"
+#include "tools/files.h"
 
 namespace wquery
 {

@@ -22,6 +22,7 @@
     <ClInclude Include="Include\wquery\gui\Button.h" />
     <ClInclude Include="Include\wquery\gui\Window.h" />
     <ClInclude Include="Include\wquery\stdafx.h" />
+    <ClInclude Include="Include\wquery\tools\files.h" />
     <ClInclude Include="Include\wquery\tools\text.h" />
     <ClInclude Include="Include\wquery\types\common.h" />
     <ClInclude Include="Include\wquery\wquery.h" />
@@ -39,6 +40,7 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="Source\tools\files.cpp" />
     <ClCompile Include="Source\tools\text.cpp" />
     <ClCompile Include="Source\types\common.cpp" />
     <ClCompile Include="Source\wquery.cpp" />

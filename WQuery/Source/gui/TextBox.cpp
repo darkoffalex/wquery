@@ -15,7 +15,7 @@ namespace wquery
 	* \brief Конструктор
 	* \param window Владеющее окно
 	*/
-	TextBox::TextBox(Window * window) : ControlBase(window, "Edit", WS_CHILD | WS_VISIBLE | WS_BORDER) {}
+	TextBox::TextBox(Window * window) : ControlBase(window, "Edit", WS_CHILD | WS_VISIBLE | WS_BORDER, {150,20}) {}
 
 	/**
 	* \brief Деструктор (унаследован от частично-вирутального)
